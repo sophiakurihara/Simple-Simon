@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/index.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
-		<title>Simple-Simon Game</title>
-	</head>
-	<body>
-		<!-- importing audio files for button sounds -->
-		<audio id="soundbuttonGre" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
-		<audio id="soundbuttonRed" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
-		<audio id="soundbuttonYel" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
-		<audio id="soundbuttonBlu" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
-		<audio id="soundbuttonWrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
-		
-		<center>
-		<div class="read_this">
-			<h1>Simon Says...</h1>
-		</div>
-		<div id="start_text">
-			<h2>New Game</h2>
-		</div>
-		<div class="simon_game">
-			<section class="top_half">
-				<button class="switches" id="box_red"></button>
-				<button class="switches" id="box_blue"></button>
-			</section>
-			<section class="bottom_half">
-				<button class="switches" id="box_green"></button>
-				<button class="switches" id="box_yellow"></button>
-			</section>
-			<div id="center">
-				<h4>SIMON</h4>
-			<input type="submit" id="begin_game" value="Begin"></input>
-			<div id="current_round">
-				<h3>Round: <span id="this_round">0</span></h3>
-			</div>
-		</div>
-		</center>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+        <title>Simple-Simon Game</title>
+    </head>
+    <body>
+        <!-- importing audio files for button sounds -->
+        <audio id="soundbuttonGre" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+        <audio id="soundbuttonRed" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+        <audio id="soundbuttonYel" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+        <audio id="soundbuttonBlu" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+        <audio id="soundbuttonWrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+        
+        <center>
+        <div id="read_this">
+            <h1 id="simon_says">Simon Says...</h1>
+        </div>
+        <div id="start_text">
+            <h2>New Game</h2>
+        </div>
+        <div class="simon_game">
+            <section class="top_half">
+                <button class="switches" id="box_red"></button>
+                <button class="switches" id="box_blue"></button>
+            </section>
+            <section class="bottom_half">
+                <button class="switches" id="box_green"></button>
+                <button class="switches" id="box_yellow"></button>
+            </section>
+            <div id="center">
+                <h4>SIMON</h4>
+            <input type="submit" id="begin_game" value="Begin"></input>
+            <input type="submit" id="restart_game" value="Restart"></input>
+            <div id="current_round">
+                <h3>Round: <span id="this_round">0</span></h3>
+            </div>
+        </div>
+        </center>
 
-		<script src="/js/jquery_min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/index.js"></script>
-	</body>
+        <script src="/js/jquery_min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/index.js"></script>
+    </body>
 </html>

@@ -1,5 +1,6 @@
 
 "use strict";
+$(document).ready(function() {
 // creates empty arrays for Simon generated sequence, and user input.
 var simonSequence = [];
 var userSequence = [];
@@ -15,29 +16,31 @@ var yellow = $("#box_yellow");
 //creates an array called 'buttons' containing all 4 button colors
 var buttons = [red, blue, green, yellow];
 
+//this function assigns audio files to each button, 
+// and will be played whenever the button is pressed.
 function buttonSounds () {
 
-red.click(function () {
-	$("#soundbuttonRed").get(0).play();
-	console.log("sound should play");
-});
+	red.click(function () {
+		$("#soundbuttonRed").get(0).play();
+		console.log("sound should play");
+	});
 
-blue.click(function () {
-	$("#soundbuttonBlu").get(0).play();
-	console.log("sound should play");
-});
+	blue.click(function () {
+		$("#soundbuttonBlu").get(0).play();
+		console.log("sound should play");
+	});
 
-green.click(function () {
-	$("#soundbuttonGre").get(0).play();
-	console.log("sound should play");
-});
+	green.click(function () {
+		$("#soundbuttonGre").get(0).play();
+		console.log("sound should play");
+	});
 
-yellow.click(function() {
-	$("#soundbuttonYel").get(0).play();
-	console.log("sound should play");
-});
+	yellow.click(function() {
+		$("#soundbuttonYel").get(0).play();
+		console.log("sound should play");
+	});
 
-}
+	}	
 
 //generates random sequence for the buttons
 function randomSequence () {
@@ -56,7 +59,7 @@ function updateRound () {
 	$("#this_round").text(round);
 }
 
-//plays the current random sequence generated for this round
+//displays the random sequence generated for this round
 function playSequence() {
 	addToSimon();
 	var index = 0;
@@ -72,13 +75,16 @@ function playSequence() {
 					opacity: "0.3"
 				}, 300);
 			});
+			// appends onto the previous random sequence.
 			index++;
 		}
 	}, interval);
+	//when playSequence is done, checks for userInput
 	userInput();
 }
 
 function userInput() {
+	buttonSounds();
 	buttons.forEach(function (whichButton, index, array) {
 		whichButton.click(function () {
 			whichButton.animate({
@@ -88,7 +94,6 @@ function userInput() {
 				opacity: "0.3"
 			}, 250);
 
-			buttonSounds();
 
 			userSequence.push(whichButton);
 			var lastUserIndex = userSequence.length-1
@@ -120,7 +125,15 @@ function userInput() {
 }
 
 	console.log("start game");
-	
+
+$("#restart_game").click(function () {
+	userSequence = [];
+	simonSequence = [];
+	round = 0;
+	updateRound();
+	setTimeout("location.reload(true);", 500);
+});
+
 $("#begin_game").click(function() {
 	userSequence = [];
 	simonSequence = [];
@@ -128,7 +141,9 @@ $("#begin_game").click(function() {
 	updateRound();
 	playSequence();
 
+
 	$("#start_text").html("<h2>Good luck!</h2>");
 });
 
+});
 
