@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
 "use strict";
 // creates empty arrays for Simon generated sequence, and user input.
 var simonSequence = [];
@@ -14,6 +14,30 @@ var yellow = $("#box_yellow");
 
 //creates an array called 'buttons' containing all 4 button colors
 var buttons = [red, blue, green, yellow];
+
+function buttonSounds () {
+
+red.click(function () {
+	$("#soundbuttonRed").get(0).play();
+	console.log("sound should play");
+});
+
+blue.click(function () {
+	$("#soundbuttonBlu").get(0).play();
+	console.log("sound should play");
+});
+
+green.click(function () {
+	$("#soundbuttonGre").get(0).play();
+	console.log("sound should play");
+});
+
+yellow.click(function() {
+	$("#soundbuttonYel").get(0).play();
+	console.log("sound should play");
+});
+
+}
 
 //generates random sequence for the buttons
 function randomSequence () {
@@ -64,11 +88,13 @@ function userInput() {
 				opacity: "0.3"
 			}, 250);
 
+			buttonSounds();
+
 			userSequence.push(whichButton);
 			var lastUserIndex = userSequence.length-1
 
 			if (userSequence[lastUserIndex] != simonSequence[lastUserIndex]) {
-				$("#start_text").text("Better luck next time!");
+				$("#start_text").html("<h2>Better luck next time!</h2>");
 				userSequence = [];
 				simonSequence = [];
 				round = 0;
@@ -76,7 +102,7 @@ function userInput() {
 				setTimeout("location.reload(true);", 2000);
 
 			} else if (userSequence.length == simonSequence.length) {
-				$("#start_text").text("Next Round:");
+				$("#start_text").html("<h2>Next Round:</h2>");
 				round++;
 				updateRound();
 				userSequence = [];
@@ -86,7 +112,7 @@ function userInput() {
 				});
 			playSequence();
 			} else {
-				$("#start_text").text("Looking good so far!");
+				$("#start_text").html("<h2>Looking good!</h2>");
 			}
 
 		});
@@ -94,6 +120,7 @@ function userInput() {
 }
 
 	console.log("start game");
+	
 $("#begin_game").click(function() {
 	userSequence = [];
 	simonSequence = [];
@@ -101,8 +128,7 @@ $("#begin_game").click(function() {
 	updateRound();
 	playSequence();
 
-	$("#start_text").text("Good luck!")
+	$("#start_text").html("<h2>Good luck!</h2>");
 });
 
 
-})();
