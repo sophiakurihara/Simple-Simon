@@ -1,0 +1,49 @@
+body {
+	background-color: #ffffff;
+}
+
+h1 {
+	padding: 50px;
+}
+
+.simon_game {
+	width: 300px;
+	padding: 25px;
+	border-style: outset;
+	background-color: #f2f2f2;
+	margin-bottom: 15px;
+
+
+}
+.switches {
+	width: 100px;
+	height: 100px;
+	z-index: 0;
+	margin: 7px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	opacity: 0.35;
+}
+
+#box_red {
+	background-color: #ff0000;
+	
+}
+
+#box_blue {
+	background-color: #0000ff;
+
+}
+
+#box_green {
+	background-color: #00cc00;
+
+}
+
+#box_yellow {
+	background-color: #ffff00;
+
+}
+
+#begin_game {
+	padding: 5px;
+}

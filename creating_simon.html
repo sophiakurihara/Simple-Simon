@@ -1,0 +1,24 @@
+creating Simon:
+
+- user clicks a button to initialize the game.
+	-user is prompted to watch the sequence.
+- round 1 starts by lighting up one button,
+	- can be done by changing opacity value on random selected button
+	-math.random?
+	-user is prompted to repeat the sequence
+-rounds continue if user replicates/matches the sequence
+	-round 2 = 2, round 3 = 3, etc.
+	-keeps count of rounds completed successfully
+-if user_sequence !== to simonSequence --> game does not continue
+	-alerts user with "thanks for playing! you made it up to (last completed round)"
+	-pop up with confirm message asking if user wants to play again
+		-if yes, re-initialize the game. start from beginning
+		-if no, "roll credits"
+
+
+
+variable user Sequence
+variable simon Sequence
+function -get button values
+function -create/initialize random simon sequence according to round
+function -check if user input == random simon sequence >> move to next round
