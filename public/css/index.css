@@ -1,16 +1,20 @@
+
 body {
-	background-color: #ffffff;
+	background-image: url("/img/04-polish-wood.png");
 }
 
 h1 {
-	padding: 50px;
+	padding-bottom: 20px;
+	font-family: "VT323", monospace;
+	font-size: 50px;
+
 }
 
 .simon_game {
 	width: 300px;
 	padding: 25px;
 	border-style: outset;
-	background-color: #f2f2f2;
+	background-color: #fff;
 	margin-bottom: 15px;
 
 
@@ -46,4 +50,9 @@ h1 {
 
 #begin_game {
 	padding: 5px;
+}
+
+#current_round {
+	font-family: "VT323", monospace;
+	font-size: 35px;
 }

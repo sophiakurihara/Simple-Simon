@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+$(document).ready(function () {
 "use strict";
 // creates empty arrays for Simon generated sequence, and user input.
 var simonSequence = [];
@@ -37,16 +37,16 @@ function playSequence() {
 	addToSimon();
 	var index = 0;
 	var max = simonSequence.length;
-	var interval = 2000;
+	var interval = 1500;
 	var intervalId = setInterval(function() {
 		var button = simonSequence[index];
 		if (index < (max)) {
 			simonSequence[index].animate({
 				opacity: "1.0"
-			}, 430, function(){
+			}, 300, function(){
 				button.animate({
 					opacity: "0.3"
-				}, 430);
+				}, 300);
 			});
 			index++;
 		}
@@ -59,19 +59,21 @@ function userInput() {
 		whichButton.click(function () {
 			whichButton.animate({
 				opacity: "1.0"
-			}, 200);
+			}, 250);
 			whichButton.animate({
 				opacity: "0.3"
-			}, 200);
+			}, 250);
 
 			userSequence.push(whichButton);
 			var lastUserIndex = userSequence.length-1
 
 			if (userSequence[lastUserIndex] != simonSequence[lastUserIndex]) {
+				$("#start_text").text("Better luck next time!");
 				userSequence = [];
 				simonSequence = [];
 				round = 0;
 				updateRound();
+				setTimeout("location.reload(true);", 2000);
 
 			} else if (userSequence.length == simonSequence.length) {
 				$("#start_text").text("Next Round:");
@@ -84,7 +86,7 @@ function userInput() {
 				});
 			playSequence();
 			} else {
-				$("#start_text").text("Doing okay!");
+				$("#start_text").text("Looking good so far!");
 			}
 
 		});
@@ -103,4 +105,4 @@ $("#begin_game").click(function() {
 });
 
 
-// })();
+})();
