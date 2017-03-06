@@ -107,7 +107,7 @@ function userInput() {
 				setTimeout("location.reload(true);", 2000);
 
 			} else if (userSequence.length == simonSequence.length) {
-				$("#start_text").html("<h2>Next Round:</h2>");
+				$("#start_text").html("<h2>New Round:</h2>");
 				round++;
 				updateRound();
 				userSequence = [];

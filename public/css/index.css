@@ -38,6 +38,7 @@ h4 {
 	height:170px;
   	margin: 20px;
   	opacity: .3;
+  	outline: none;
 }
 
 #box_red {
@@ -111,6 +112,7 @@ h4 {
   	font-size: 15px;
   	line-height: 17px;
  	text-align: center;
+ 	outline: none;
 }
 
 #begin_game:hover {
@@ -142,6 +144,7 @@ h4 {
   	font-size: 15px;
   	line-height: 17px;
  	text-align: center;
+ 	outline: none;
 }
 
 #restart_game:hover {
