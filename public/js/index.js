@@ -106,11 +106,13 @@ $(document).ready(function() {
                 //if the userSequence input is not the same is the simonSequence
                 if (userSequence[lastUserIndex] != simonSequence[lastUserIndex]) {
                     $("#start_text").html("<h2>Better luck next time!</h2>");
+                    $("#soundbuttonWrong").get(0).play();
                     userSequence = [];
                     simonSequence = [];
                     round = 0;
                     updateRound();
                     setTimeout("location.reload(true);", 2000);
+
                 //if the userSequence matches simonSequence 
                 } else if (userSequence.length == simonSequence.length) {
                     $("#start_text").html("<h2>New Round:</h2>");
