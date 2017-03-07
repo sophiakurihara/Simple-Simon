@@ -148,6 +148,11 @@ $(document).ready(function() {
         round = 0;
         updateRound();
         playSequence();
+        $("#simon_says").animate({
+            left: "100px"
+        },200).animate({
+            right: "100px"
+        },200);
 
         //gives the user a good luck message once the game begins!
         $("#start_text").html("<h2>Good luck!</h2>");
