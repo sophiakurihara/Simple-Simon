@@ -143,6 +143,12 @@ $(document).ready(function() {
     });
     //initializes the game board when the begin button is clicked
     $("#begin_game").click(function() {
+        $("#simon_says").animate({
+            left: "100px"
+        },500).animate({
+            right: "100px"
+        },500);
+        
         userSequence = [];
         simonSequence = [];
         round = 0;
