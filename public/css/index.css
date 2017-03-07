@@ -157,9 +157,12 @@ h4 {
     text-decoration: none;
 }
 
+/*additional CSS is for the added timer feature*/
+
 .container {
-	bottom: 30px;
-	position: absolute;
+	bottom: 75px;
+	right: 10px;
+	position: relative;
 }
 .timer {
 	padding: 10px;

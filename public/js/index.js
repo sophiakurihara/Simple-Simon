@@ -10,6 +10,10 @@ $(document).ready(function() {
     // begins game at round 0;
     var round = 0;
 
+    // hides audio file from showing in game, and lowers volume to 50%
+    $("#comics").hide();
+    document.getElementById("comics").volume = 0.5;
+
     // assign variable names to IDs to simplify syntax
     var red = $("#box_red");
     var blue = $("#box_blue");
