@@ -39,7 +39,7 @@ $(document).ready(function() {
             $("#soundbuttonYel").get(0).play();
         }); 
 
-        }   
+        }  
 
     //generates random order of buttons for the simonSequence
     function randomSequence () {
