@@ -131,8 +131,6 @@ $(document).ready(function() {
             });
         });
     }
-    // just a console to check if the game is starting over properly
-    console.log("start game");
     //refreshes the page when the restart button is clicked
     $("#restart_game").click(function () {
         userSequence = [];
