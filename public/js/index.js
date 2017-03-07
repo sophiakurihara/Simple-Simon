@@ -61,12 +61,6 @@ $(document).ready(function() {
     /*displays the random sequence generated for this round
     by lighting up the buttons on the game board*/
     function playSequence() {
-        $("#simon_says").animate({
-            right: "100px"
-        },3000).animate({
-            left: "100px"
-        },3000);
-
         addToSimon();
         var index = 0;
         var max = simonSequence.length;
