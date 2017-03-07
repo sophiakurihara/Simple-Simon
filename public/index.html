@@ -18,7 +18,7 @@
         
         <center>
         <div id="read_this">
-            <h1 id="simon_says">Simon Says...</h1>
+            <marquee behavior="alternate" direction="right" id="simon_marquee"><h1 id="simon_says">Simon Says...</h1></marquee>
         </div>
         <div id="start_text">
             <h2>New Game</h2>
@@ -34,7 +34,7 @@
             </section>
             <div id="center">
                 <h4>SIMON</h4>
-            <input type="submit" id="begin_game" value="Begin"></input>
+            <input type="submit" id="begin_game" value="Begin" onClick="document.getElementById("simon_marquee").start()></input>
             <input type="submit" id="restart_game" value="Restart"></input>
             <div id="current_round">
                 <h3>Round: <span id="this_round">0</span></h3>
